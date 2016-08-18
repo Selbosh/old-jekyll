@@ -1,0 +1,17 @@
+// Choose the actual colours
+$primary-light: #D0CEEE;
+$primary-dark: #242998;
+$black: #444;
+$darkgrey: #555;
+$white: #fff;
+$grey: #888;
+$lightgrey: #ccc;
+
+// Assign colours to generic roles
+$colour-bg: $white;
+$colour-copy: $black;
+$colour-header: $black;
+$colour-meta: $grey;
+$colour-link: $primary-dark;
+
+/* Implement the roles: see other .scss files */

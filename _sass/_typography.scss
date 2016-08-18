@@ -1,0 +1,62 @@
+// Depends: _colours.scss
+
+@import '//fonts.googleapis.com/css?family=Playfair+Display:400,700';
+
+$face-body: Palatino, "Palatino Linotype", "Bookman Antiqua", Garamond, serif;
+$face-display: "Playfair Display", Georgia, serif;
+
+body {
+  color: $colour-copy;
+  font-family: $face-body;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin: 1em 0;
+}
+
+a {
+  color: $primary-dark;
+  text-decoration: none;
+}
+
+%header-text {
+  font-family: $face-display;
+  color: $colour-header;
+  font-weight: bold;
+  margin: .81em 0;
+  a { color: inherit; }
+}
+
+@each $header, $size in (h1: 2.5rem, h2: 2rem, h3: 1.5rem, h4: 1.3rem, h5: 1.2rem, h6: 1rem) {
+  #{$header} {
+    @extend %header-text;
+    font-size: $size;
+  }
+}
+
+header#masthead aside {
+  font-size: 1rem;
+}
+
+code, pre {
+  font-family: monospace;
+}
+
+article footer {
+  display: inline-block;
+  color: $colour-meta;
+}
+
+// For debugging only. Adds a border around all boxes
+$debug-box: false;
+@if ($debug-box) {
+  @each $tag, $colour in (time: red, (h1,h2,h3,h4,h5,h6): #ff28f6, p: #0f0) {
+    #{$tag} {
+      border: 1px dashed $colour;
+    }
+  }
+}
