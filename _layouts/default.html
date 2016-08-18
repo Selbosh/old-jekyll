@@ -3,9 +3,11 @@
   {% include head.html %}
   <body>
     <header id="masthead">
+      <img src="figure/mug.svg" width="120px" alt="Tea and Stats logo">
       <h1><a href="{{ site.url }}">{{ site.title | escape }}</a></h1>
       <aside>{% if site.description %}{{ site.description | truncate: 100 }}{% endif %}</aside>
-      <img src="http://placehold.it/160x160" alt="Tea and Stats logo">
+      <!--<img src="http://placehold.it/160x160" alt="Tea and Stats logo">-->
+
     </header>
     <main role="main">
       {{ content }}

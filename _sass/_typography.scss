@@ -19,27 +19,30 @@ p {
 }
 
 a {
-  color: $primary-dark;
+  color: $colour-link;
   text-decoration: none;
 }
 
 %header-text {
-  font-family: $face-display;
+  font-family: $face-display;//$face-display;
   color: $colour-header;
-  font-weight: bold;
+  font-weight: normal;//bold;
   margin: .81em 0;
   a { color: inherit; }
 }
 
-@each $header, $size in (h1: 2.5rem, h2: 2rem, h3: 1.5rem, h4: 1.3rem, h5: 1.2rem, h6: 1rem) {
+@each $header, $size in (h1: 3rem, h2: 1.8rem, h3: 1.5rem, h4: 1.3rem, h5: 1.2rem, h6: 1rem) {
   #{$header} {
     @extend %header-text;
     font-size: $size;
   }
 }
 
-header#masthead aside {
-  font-size: 1rem;
+header#masthead {
+  aside {
+    font-size: 1rem;
+    color: $colour-meta;
+  }
 }
 
 code, pre {
