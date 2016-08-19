@@ -4,18 +4,19 @@ $max-width: 48rem; // = 1280px
 body {
   max-width: $max-width;
   padding: 0 2rem;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   background-color: $colour-bg;
 }
 
 header#masthead {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 5rem; // 5rem
   h1 {
     margin-top: 0;
     margin-bottom: 1rem;
   }
   img {
+    width: 7.5rem;
     border-radius: 50%;
     margin-top: 1rem;
   }
@@ -30,5 +31,34 @@ article {
   footer {
     display: block;
     address { display: block; margin-bottom: 0.5em; }
+  }
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 4rem;
+  a {
+    display: inline-block;
+    margin: 0 .75em;
+  }
+}
+
+main {
+  article:last-of-type {
+    margin-bottom: 2.5rem;
+  }
+  article#singlepost {
+    padding-bottom: 3rem;
+    // border-bottom: none;
+  }
+}
+
+footer#footer {
+  display: block;
+  text-align: center;
+  img {
+    width: 3.75rem;
+    display: block;
+    margin: 0 auto 2rem auto;
   }
 }
