@@ -2,27 +2,29 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <header id="masthead">
-      <img src="{{ site.baseurl }}/figure/mug.svg" width="120px" alt="Tea and Stats">
-      <h1><a href="{{ site.url }}">{{ site.title | escape }}</a></h1>
-      <aside>{% if site.description %}{{ site.description | truncate: 100 }}{% endif %}</aside>
-      <!--<img src="http://placehold.it/160x160" alt="Tea and Stats logo">-->
+    <div id="wrapper">
+      <header id="masthead">
+        <img src="{{ site.baseurl }}/figure/mug.svg" width="120px" alt="Tea and Stats">
+        <h1><a href="{{ site.url }}">{{ site.title | escape }}</a></h1>
+        <aside>{% if site.description %}{{ site.description | truncate: 100 }}{% endif %}</aside>
+        <!--<img src="http://placehold.it/160x160" alt="Tea and Stats logo">-->
 
-    </header>
-    <nav>
-      <a href='#'>About</a>
-      <a href='#'>Articles</a>
-      <a href='#'>Projects</a>
-      <a href='#'>Search</a>
-    </nav>
-    <main role="main">
-      {{ content }}
-    </main>
-    <footer id="footer">
-      <!--<a href="{{ site.url }}">-->
-        <img src="{{ site.baseurl }}/figure/mug.svg" width="60px" alt="Tea and Stats">
-      <!--</a>-->
-      <span>© 2016 David A. Selby | Brewed in Jekyll | <a href='#'>Github source</a></span>
-    </footer>
+      </header>
+      <nav>
+        <a href='#'>About</a>
+        <a href='#'>Articles</a>
+        <a href='#'>Projects</a>
+        <a href='#'>Search</a>
+      </nav>
+      <main role="main">
+        {{ content }}
+      </main>
+      <footer id="footer">
+        <!--<a href="{{ site.url }}">-->
+          <img src="{{ site.baseurl }}/figure/mug.svg" width="60px" alt="Tea and Stats">
+        <!--</a>-->
+        <span>© 2016 David A. Selby | Brewed in Jekyll | <a href='#'>Github source</a></span>
+      </footer>
+    </div>
   </body>
 </html>
