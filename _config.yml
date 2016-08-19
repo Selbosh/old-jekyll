@@ -18,7 +18,7 @@ author: # Default
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Data science with David Selby
-baseurl:  # the subpath of your site, e.g. /blog
-url: http://localhost:4000 # change this before push
+baseurl: /blogr  # the subpath of your site, e.g. /blog
+url: http://selbydavid.com/blogr # change this before push
 twitter_username: TeaStats
 github_username:  Selbosh
