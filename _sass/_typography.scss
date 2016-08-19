@@ -1,8 +1,10 @@
 // Depends: _colours.scss
 
 @import '//fonts.googleapis.com/css?family=Playfair+Display:400,700';
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 
 $face-body: Palatino, "Palatino Linotype", "Bookman Antiqua", Garamond, serif;
+$face-headings: Raleway, "Century Gothic", Arial, sans-serif;
 $face-display: "Playfair Display", Georgia, serif;
 
 body {
@@ -13,7 +15,7 @@ body {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   margin: 1em 0;
 }
@@ -24,14 +26,16 @@ a {
 }
 
 %header-text {
-  font-family: $face-display;//$face-display;
+  font-family: $face-headings;//$face-display;
   color: $colour-header;
   font-weight: normal;//bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin: .81em 0;
   a { color: inherit; }
 }
 
-@each $header, $size in (h1: 3rem, h2: 1.8rem, h3: 1.5rem, h4: 1.3rem, h5: 1.2rem, h6: 1rem) {
+@each $header, $size in (h1: 2.5rem, h2: 1.5rem, h3: 1.3rem, h4: 1.15rem, h5: 1.0rem, h6: 0.9rem) {
   #{$header} {
     @extend %header-text;
     font-size: $size;
@@ -39,6 +43,11 @@ a {
 }
 
 header#masthead {
+  h1 {
+    font-family: $face-display;
+    text-transform: none;
+    letter-spacing: normal;
+  }
   aside {
     font-size: 1rem;
     color: $colour-meta;

@@ -23,7 +23,10 @@ header#masthead {
 
 article {
   //padding: 0.5em 0;
-  border-bottom: 1px solid $lightgrey;
+  border-bottom: 1px dotted $primary;
+  header, footer {
+    text-align:center;
+  }
   footer {
     display: block;
     address { display: block; margin-bottom: 0.5em; }
