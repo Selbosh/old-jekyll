@@ -1,6 +1,6 @@
 // Depends: _colours.scss
 
-@import '//fonts.googleapis.com/css?family=Playfair+Display:400,700';
+@import '//fonts.googleapis.com/css?family=Playfair+Display:400,400i';
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
 $face-body: Palatino, "Palatino Linotype", "Bookman Antiqua", Garamond, serif;
@@ -23,6 +23,10 @@ p {
 a {
   color: $colour-link;
   text-decoration: none;
+  &:hover {
+    color: $colour-accent;
+    border: none;
+  }
 }
 
 %header-text {
@@ -32,10 +36,9 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: .81em 0;
-  a { color: inherit; }
 }
 
-@each $header, $size in (h1: 2.5rem, h2: 1.5rem, h3: 1.3rem, h4: 1.15rem, h5: 1.0rem, h6: 0.9rem) {
+@each $header, $size in (h1: 3rem, h2: 1.5rem, h3: 1.3rem, h4: 1.15rem, h5: 1.0rem, h6: 0.9rem) {
   #{$header} {
     @extend %header-text;
     font-size: $size;
@@ -44,13 +47,26 @@ a {
 
 header#masthead {
   h1 {
-    font-family: $face-display;
+    font: italic normal 5rem $face-display;
     text-transform: none;
     letter-spacing: normal;
+    a:hover {
+      color:inherit; // Disable overlay highlight for masthead
+    }
   }
   aside {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
     color: $colour-meta;
+  }
+}
+
+nav {
+  a {
+    border-bottom: 1px dotted $colour-accent;
+    font: normal 1rem $face-headings;
+    letter-spacing: 0.1em;
+    text-transform: none;
   }
 }
 
@@ -63,12 +79,9 @@ article footer {
   color: $colour-meta;
 }
 
-// For debugging only. Adds a border around all boxes
-$debug-box: false;
-@if ($debug-box) {
-  @each $tag, $colour in (time: red, (h1,h2,h3,h4,h5,h6): #ff28f6, p: #0f0) {
-    #{$tag} {
-      border: 1px dashed $colour;
-    }
-  }
+footer#footer {
+  color: $colour-meta;
+  text-transform: uppercase;
+  font: normal 0.8rem $face-headings;
+  letter-spacing: 0.05em;
 }
