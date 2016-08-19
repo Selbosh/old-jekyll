@@ -84,7 +84,8 @@ names(formals(servr::jekyll))  # arguments of the jekyll() function
 ```
 
 ```
-## [1] "dir"     "input"   "output"  "script"  "serve"   "command" "..."
+## [1] "dir"     "input"   "output"  "script"  "serve"   "command"
+## [7] "..."
 ```
 
 Just to test inline R expressions[^2] in **knitr**, we know the first element in `x` (created in the code chunk above) is 9.44. You can certainly draw some graphs as well:
@@ -97,7 +98,7 @@ par(mar = c(4, 4, .1, .1))
 plot(cars, pch = 19, col = 'red')  # a scatterplot
 ```
 
-![A scatterplot of the cars data](/figure/source/2014-09-28-jekyll-with-knitr/cars-1.png)
+![A scatterplot of the cars data](/blogr/img/2014-09-28-jekyll-with-knitr/cars-1.png)
 
 ## The build script
 
@@ -105,9 +106,9 @@ Zero-configuration is required for `servr::jekyll()` to work on your Jekyll webs
 
 
 ```r
-jekyll(dir = ".", input = c(".", "_source", "_posts"), output = c(".", "_posts", 
-    "_posts"), script = c("Makefile", "build.R"), serve = TRUE, command = "jekyll build", 
-    ...)
+jekyll(dir = ".", input = c(".", "_source", "_posts"), output = c(".", 
+    "_posts", "_posts"), script = c("Makefile", "build.R"), serve = TRUE, 
+    command = "jekyll build", ...)
 ```
 
 By default, `jekyll()` looks for `.Rmd` files under the root directory, the `_source` directory, and the `_posts` directory of the Jekyll website. For example, if you put your R Markdown posts under `_source`, they will be compiled to the `_posts` directory[^3].
