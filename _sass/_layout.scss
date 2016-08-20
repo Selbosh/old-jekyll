@@ -37,6 +37,9 @@ article {
     display: block;
     address { display: block; margin-bottom: 0.5em; }
   }
+  img {
+    max-width: 100%;
+  }
 }
 
 nav {
