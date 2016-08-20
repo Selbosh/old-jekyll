@@ -35,7 +35,11 @@ article {
   }
   footer {
     display: block;
-    address { display: block; margin-bottom: 0.5em; }
+    address {
+      /* Not in use! */
+      display: block;
+      margin-bottom: 0.5em;
+    }
   }
   img {
     max-width: 100%;

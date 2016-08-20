@@ -5,13 +5,6 @@ layout: default
 <article id='singlepost'>
   <header><h2>{{ page.title }}</h2></header>
   <footer>
-    <address>
-      {% if page.author %}
-        {{ page.author }}
-      {% elsif site.author %}
-        {{ site.author }}
-      {% endif %}
-    </address>
     <time datetime="{{ page.date }}">{{ page.date | date: "%-d %B %Y" }}</time>
   </footer>
   {{ content }}
