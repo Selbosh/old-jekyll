@@ -125,7 +125,7 @@ sub { vertical-align: sub; }
 ol, ul {
   list-style-position: outside;
   margin-left: 1.5rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
 }
 
 ol {
@@ -145,3 +145,10 @@ ul {
     }
   }
 }
+
+article>ol, article>ul {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+li { line-height: 1.8; }
