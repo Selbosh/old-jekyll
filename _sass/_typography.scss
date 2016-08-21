@@ -33,20 +33,29 @@ a {
   font-family: $face-headings;//$face-display;
   color: $colour-header;
   font-weight: normal;//bold;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: .81em 0;
+  margin: 2em 0 0.5em;
 }
 
-@each $header, $size in (h1: 3rem, h2: 1.5rem, h3: 1.3rem, h4: 1.15rem, h5: 1.0rem, h6: 0.9rem) {
+@each $header, $size in (h1: 1.75rem, h2: 1.5rem, h3: 1.3rem, h4: 1.15rem, h5: 1.0rem, h6: 0.9rem) {
   #{$header} {
     @extend %header-text;
     font-size: $size;
   }
 }
 
+// Post titles only
+article header h2 {
+  @extend %header-text;
+  text-transform: uppercase;
+  margin: .81em 0;
+  border: none;
+}
+
+// Masthead
 header#masthead {
-  h1 {
+  h1 { // 'Name of site' text
+    border: none;
     font: italic normal 5rem $face-display;
     text-transform: none;
     letter-spacing: normal;
@@ -54,13 +63,14 @@ header#masthead {
       color:inherit; // Disable overlay highlight for masthead
     }
   }
-  aside {
+  aside { // Tagline underneath logo
     font-size: 1.5rem;
     font-style: italic;
     color: $colour-meta;
   }
 }
 
+// Main navigation menu
 nav {
   a {
     border-bottom: 1px dotted $colour-accent;
@@ -70,6 +80,7 @@ nav {
   }
 }
 
+// Code blocks and teletype
 code, pre {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   background-color: #f5f8fa;
@@ -91,14 +102,46 @@ p>code { // In-line code only
   }
 }
 
+// Post date info at top of articles
 article footer {
   display: inline-block;
   color: $colour-meta;
 }
 
+// Footer and copyright information
 footer#footer {
   color: $colour-meta;
   text-transform: uppercase;
   font: normal 0.8rem $face-headings;
   letter-spacing: 0.05em;
+}
+
+// Superscripts and subscripts
+sup, sub { font-size: smaller; }
+sup { vertical-align: super; }
+sub { vertical-align: sub; }
+
+// Lists, lists of lists and lists of lists of lists
+ol, ul {
+  list-style-position: outside;
+  margin-left: 1.5rem;
+  line-height: 1.5;
+}
+
+ol {
+  list-style-type: decimal;
+  li { padding-left: .5rem; }
+  ol { list-style-type: lower-alpha;
+    ol { list-style-type: lower-roman;
+    }
+  }
+}
+
+ul {
+  list-style-type: disc;
+  li { padding-left: .3rem; }
+  ul { list-style-type: square;
+    ul { list-style-type: circle;
+    }
+  }
 }
