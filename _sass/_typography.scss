@@ -1,10 +1,11 @@
 // Depends: _colours.scss
 
-@import '//fonts.googleapis.com/css?family=Playfair+Display:400i|Lora:700i';
+@import '//fonts.googleapis.com/css?family=Playfair+Display:400i|Open+Sans:300';
 
 $face-body: Palatino, "Palatino Linotype", "Bookman Antiqua", Garamond, serif;
-$face-headings: Lora, Palatino, "Palatino Linotype", Georgia, serif;
+$face-headings: Palatino, "Palatino Linotype", Georgia, serif;
 $face-display: "Playfair Display", Georgia, serif;
+$face-sans: "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
 
 body {
   color: $colour-copy;
@@ -31,7 +32,6 @@ a {
 %header-text {
   font-family: $face-headings;//$face-display;
   color: $colour-header;
-  font-weight: bold;
   font-style: italic;
   margin: 2em 0 0.5em;
 }
@@ -72,7 +72,7 @@ header#masthead {
 nav {
   a {
     border-bottom: 1px dotted $colour-accent;
-    font: normal 1rem $face-headings;
+    font: normal 1rem $face-sans;
     letter-spacing: 0.1em;
     text-transform: none;
   }
@@ -110,7 +110,7 @@ article footer {
 footer#footer {
   color: $colour-meta;
   text-transform: uppercase;
-  font: normal 0.8rem $face-body;
+  font: normal 0.8rem $face-sans;
   letter-spacing: 0.05em;
 }
 
