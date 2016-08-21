@@ -1,10 +1,9 @@
 // Depends: _colours.scss
 
-@import '//fonts.googleapis.com/css?family=Playfair+Display:400,400i';
-@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import '//fonts.googleapis.com/css?family=Playfair+Display:400i|Lora:700i';
 
 $face-body: Palatino, "Palatino Linotype", "Bookman Antiqua", Garamond, serif;
-$face-headings: Raleway, "Century Gothic", Arial, sans-serif;
+$face-headings: Lora, Palatino, "Palatino Linotype", Georgia, serif;
 $face-display: "Playfair Display", Georgia, serif;
 
 body {
@@ -32,8 +31,8 @@ a {
 %header-text {
   font-family: $face-headings;//$face-display;
   color: $colour-header;
-  font-weight: normal;//bold;
-  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-style: italic;
   margin: 2em 0 0.5em;
 }
 
@@ -47,15 +46,13 @@ a {
 // Post titles only
 article header h2 {
   @extend %header-text;
-  text-transform: uppercase;
+  line-height: 1.1;
   margin: .81em 0;
-  border: none;
 }
 
 // Masthead
 header#masthead {
   h1 { // 'Name of site' text
-    border: none;
     font: italic normal 5rem $face-display;
     text-transform: none;
     letter-spacing: normal;
