@@ -29,6 +29,9 @@ a {
   }
 }
 
+strong { font-weight: bold; }
+em { font-style: italic; }
+
 %header-text {
   font-family: $face-headings;
   color: $colour-header;
