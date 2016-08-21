@@ -1,5 +1,4 @@
-// blank
-$max-width: 48rem; // = 1280px
+$max-width: 48rem; /* = 1280px */
 
 body {
   max-width: $max-width;
@@ -28,7 +27,6 @@ header#masthead {
 }
 
 article {
-  //padding: 0.5em 0;
   border-bottom: 1px dotted $primary;
   header, footer {
     text-align:center;
@@ -61,7 +59,6 @@ main {
   }
   article#singlepost {
     padding-bottom: 1rem;
-    // border-bottom: none;
   }
 }
 

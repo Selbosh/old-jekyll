@@ -30,7 +30,7 @@ a {
 }
 
 %header-text {
-  font-family: $face-headings;//$face-display;
+  font-family: $face-headings;
   color: $colour-header;
   font-style: italic;
   margin: 2em 0 0.5em;
@@ -43,7 +43,7 @@ a {
   }
 }
 
-// Post titles only
+/* Post titles only */
 article header h2 {
   @extend %header-text;
   font-size: 1.75rem;
@@ -51,24 +51,24 @@ article header h2 {
   margin: .81em 0;
 }
 
-// Masthead
+/* Masthead */
 header#masthead {
-  h1 { // 'Name of site' text
+  h1 { /* 'Name of site' text */
     font: italic normal 5rem $face-display;
     text-transform: none;
     letter-spacing: normal;
     a:hover {
-      color:inherit; // Disable overlay highlight for masthead
+      color:inherit; /* Disable overlay highlight for masthead */
     }
   }
-  aside { // Tagline underneath logo
+  aside { /* Tagline underneath logo */
     font-size: 1.5rem;
     font-style: italic;
     color: $colour-meta;
   }
 }
 
-// Main navigation menu
+/* Main navigation menu */
 nav {
   a {
     border-bottom: 1px dotted $colour-accent;
@@ -78,7 +78,7 @@ nav {
   }
 }
 
-// Code blocks and teletype
+/* Code blocks and teletype */
 code, pre {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   background-color: #f5f8fa;
@@ -91,22 +91,22 @@ pre {
   line-height: 1.3;
 }
 
-p>code { // In-line code only
+p>code { /* In-line code only */
   letter-spacing: -0.05em;
   /* Space in-line code apart from surrounding words
      (Inspired by GitHub's CSS) */
   &::before, &::after {
-    content: "\00a0"; // = non-breaking space
+    content: "\00a0"; /* = non-breaking space */
   }
 }
 
-// Post date info at top of articles
+/* Post date info at top of articles */
 article footer {
   display: inline-block;
   color: $colour-meta;
 }
 
-// Footer and copyright information
+/* Footer and copyright information */
 footer#footer {
   color: $colour-meta;
   text-transform: uppercase;
@@ -114,20 +114,20 @@ footer#footer {
   letter-spacing: 0.05em;
 }
 
-// Superscripts and subscripts
+/* Superscripts and subscripts */
 sup, sub {
   font-size: smaller;
   vertical-align: super;
-  line-height: 0; // Protect line-height of surrounding text
+  line-height: 0; /* Protect line-height of surrounding text */
 }
 sub { vertical-align: sub; }
 
-// Lists, lists of lists and lists of lists of lists
+/* Lists, lists of lists and lists of lists of lists */
 ol, ul {
   list-style-position: outside;
   margin-left: 3rem;
   font-size: 1.1rem;
-  ol, ul { // level >=2
+  ol, ul { /* level >=2 */
     margin-left: 1.5rem;
   }
   p { font-size: inherit; }
@@ -153,7 +153,7 @@ ul {
 
 li { line-height: 1.8; }
 
-// Footnotes section
+/* Footnotes section */
 div.footnotes {
   border-top: 1px dotted $colour-accent;
   padding-top: 1rem;
