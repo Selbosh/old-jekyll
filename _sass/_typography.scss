@@ -125,8 +125,11 @@ sub { vertical-align: sub; }
 // Lists, lists of lists and lists of lists of lists
 ol, ul {
   list-style-position: outside;
-  margin-left: 1.5rem;
+  margin-left: 3rem;
   font-size: 1.1rem;
+  ol, ul { // level >=2
+    margin-left: 1.5rem;
+  }
 }
 
 ol {
@@ -145,11 +148,6 @@ ul {
     ul { list-style-type: circle;
     }
   }
-}
-
-article>ol, article>ul {
-  margin-left: 3rem;
-  margin-right: 3rem;
 }
 
 li { line-height: 1.8; }
