@@ -115,8 +115,11 @@ footer#footer {
 }
 
 // Superscripts and subscripts
-sup, sub { font-size: smaller; }
-sup { vertical-align: super; }
+sup, sub {
+  font-size: smaller;
+  vertical-align: super;
+  line-height: 0; // Protect line-height of surrounding text
+}
 sub { vertical-align: sub; }
 
 // Lists, lists of lists and lists of lists of lists
