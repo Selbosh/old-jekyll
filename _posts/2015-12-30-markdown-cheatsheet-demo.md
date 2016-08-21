@@ -109,7 +109,15 @@ ___
 
 ***
 
-<div class="divider"></div>
+So, for example, let's imagine that I want to produce a horizontal rule under a paragraph of text.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci odio, aliquam eget blandit id, finibus at ex. Morbi non erat neque. Nullam porttitor dolor id eros tincidunt faucibus. Morbi non euismod libero. Mauris vulputate vel mauris sit amet condimentum. Nulla facilisi. Aenean augue erat, scelerisque ut vulputate non, pellentesque in nulla.
+
+___
+
+Duis viverra hendrerit ligula blandit scelerisque. Praesent non luctus erat, ut vulputate sapien. Duis porttitor ligula in vehicula suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus porta tincidunt urna. Nulla arcu dolor, tristique et eros in, bibendum bibendum nisi. Suspendisse eget dapibus tellus. Nulla et ex vitae elit luctus aliquam.
+
+---
 
 ## Media
 

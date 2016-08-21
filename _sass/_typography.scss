@@ -162,3 +162,39 @@ div.footnotes {
     p { margin: inherit; }
   }
 }
+
+/* Booktabs-style tables */
+table {
+  width: auto;
+  margin: 2rem auto;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+thead {
+  vertical-align:middle;
+  border-color:inherit;
+}
+th, td {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+th {
+    border-bottom: 1px solid #999;
+    padding: 0.65ex 0.5em 0.4ex 0.5em;
+    font-weight: normal;
+}
+td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+tr:first-child td {
+    padding-top: 0.65ex;
+}
+
+/* Horizontal rules */
+hr {
+  border: dotted $colour-accent;
+  border-width: 1px 0 0 0;
+  margin: 2rem 0;
+}
