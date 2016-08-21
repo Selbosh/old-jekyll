@@ -36,7 +36,7 @@ a {
   margin: 2em 0 0.5em;
 }
 
-@each $header, $size in (h1: 1.75rem, h2: 1.5rem, h3: 1.3rem, h4: 1.15rem, h5: 1.0rem, h6: 0.9rem) {
+@each $header, $size in (h1: 1.75rem, h2: 1.75rem, h3: 1.5rem, h4: 1.3rem, h5: 1.15rem, h6: 1rem) {
   #{$header} {
     @extend %header-text;
     font-size: $size;
@@ -46,6 +46,7 @@ a {
 // Post titles only
 article header h2 {
   @extend %header-text;
+  font-size: 1.75rem;
   line-height: 1.1;
   margin: .81em 0;
 }
