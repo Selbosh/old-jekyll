@@ -81,7 +81,7 @@ nav {
 /* Code blocks and teletype */
 code, pre {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  background-color: #f5f8fa;
+  background-color: $colour-code;
   font-size: 1rem;
 }
 
@@ -167,12 +167,11 @@ div.footnotes {
 table {
   width: auto;
   margin: 2rem auto;
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
+  border-top: 1px solid $colour-copy;
+  border-bottom: 1px solid $colour-copy;
 }
 thead {
   vertical-align:middle;
-  border-color:inherit;
 }
 th, td {
     text-align: left;
