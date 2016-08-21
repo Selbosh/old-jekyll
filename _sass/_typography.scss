@@ -130,6 +130,7 @@ ol, ul {
   ol, ul { // level >=2
     margin-left: 1.5rem;
   }
+  p { font-size: inherit; }
 }
 
 ol {
@@ -151,3 +152,13 @@ ul {
 }
 
 li { line-height: 1.8; }
+
+// Footnotes section
+div.footnotes {
+  border-top: 1px dotted $colour-accent;
+  padding-top: 1rem;
+  margin-top: 2.5rem;
+  ol, ul {
+    p { margin: inherit; }
+  }
+}

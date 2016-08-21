@@ -18,12 +18,12 @@ require(plyr)
 data<- searchTwitter("#tea", n=1500, cainfo="cacert.pem")
 text = laply(data, function(t) t$getText())
 {% endhighlight %}
-	
+
 [^R]:	Jeff Gentry (2013). [*twitteR: R based Twitter client*](http://CRAN.R-project.org/package=twitteR). R package version 1.1.7.
-	
+
 Before anything interesting can be gleaned from the dataset, some housework must be done. Text mining[^tm] removes irrelevant URLs, punctuation, symbols and "stop words", leaving each tweet ready for scrutiny.
 
-[^tm]:	Ingo Feinerer and Kurt Hornik (2014). [*tm: Text Mining Package*](http://CRAN.R-project.org/package=tm). R package version 0.5-10.	
+[^tm]:	Ingo Feinerer and Kurt Hornik (2014). [*tm: Text Mining Package*](http://CRAN.R-project.org/package=tm). R package version 0.5-10.
 
 So what are our friends on Twitter saying about tea? Finding out calls for a graph. But not just any graph: a word cloud[^wc], displaying words according to frequency.
 
@@ -59,7 +59,3 @@ Our #tea dataset has a score distribution that's mostly positive, with a mean se
 On the other hand, the outlook isn't so rosy for our friend Justin. From our dataset of 10,003 tweets, the mean mood score is -0.07, which is slightly negative. He's a divisive topic of discussion, too: the score variance is 0.87, giving a more widely-spread distribution of sentiments.
 
 So it's official. Twitter likes tea more than it likes Justin Bieber. Probably. Time for a cuppa.
-
------
-
-### References
