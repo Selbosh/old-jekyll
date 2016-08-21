@@ -200,3 +200,40 @@ hr {
   border-width: 1px 0 0 0;
   margin: 2rem 0;
 }
+
+/* Quotations */
+%myquote {
+  position: absolute;
+  font: bold 4rem Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  line-height: 0;
+  color: #999;
+}
+blockquote {
+  quotes: '\201C' '\201D' '\2018' '\2019'; /* " " ' ' */
+  margin: 2rem 0.8rem;
+  font-style: italic;
+  padding: 0.1rem 1rem;
+  border-left: 0.3rem solid #ccc;
+  background-color: $colour-code;
+  position: relative;
+  display: block;
+  &:before {
+    @extend %myquote;
+    content: open-quote;
+    text-align: left;
+    top: 2.5rem;
+    left: 1rem;
+  }
+  &:after {
+    @extend %myquote;
+    content: close-quote;
+    bottom: 0.5rem;
+    right: 1rem;
+  }
+  p {
+    font-style: italic;
+    margin: 0 3rem;
+    padding: 0.5rem 0;
+  }
+}
