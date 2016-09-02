@@ -5,15 +5,20 @@
     <div id="wrapper">
       <header id="masthead">
         <img src="{{ site.baseurl }}/img/mug.svg" width="120px" alt="Tea and Stats">
-        <h1><a href="{{ site.url }}">{{ site.title | escape }}</a></h1>
+        <h1><a href="{{ site.baseurl }}/">{{ site.title | escape }}</a></h1>
         <aside>{% if site.description %}{{ site.description | truncate: 100 }}{% endif %}</aside>
         <!--<img src="http://placehold.it/160x160" alt="Tea and Stats logo">-->
 
       </header>
       <nav>
-        <a href='#'>About</a>
-        <a href='#'>Articles</a>
-        <a href='#'>Projects</a>
+		{% for page in site.pages %}
+			{% if page.title and page.hide != true %}
+				<a href="{{ page.url | prepend: site.baseurl }}">
+					{{ page.title }}
+				</a>
+			{% endif %}
+		{% endfor %}
+		<a href="{{ site.baseurl }}/">Blog</a>
         <a href='#'>Search</a>
       </nav>
       <main role="main">
@@ -21,7 +26,9 @@
       </main>
       <footer id="footer">
         <!--<a href="{{ site.url }}">-->
-          <img src="{{ site.baseurl }}/img/mug.svg" width="60px" alt="Tea and Stats">
+          <a href='#'>
+			<img src="{{ site.baseurl }}/img/mug.svg" width="60px" alt="Back to top" title="Back to top">
+		  </a>
         <!--</a>-->
         © 2016 David A. Selby | Brewed in Jekyll | <a href='#'>Github source</a>
       </footer>
