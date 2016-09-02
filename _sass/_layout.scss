@@ -46,7 +46,13 @@ article {
     }
   }
   img {
-    max-width: 100%;
+	max-width: 90%;
+	/* Centre align: */
+	display: block;
+	margin: {
+		left: auto;
+		right: auto
+	}
   }
 }
 
