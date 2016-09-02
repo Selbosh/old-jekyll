@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I am David Selby, a second-year statistics PhD student at the University of Warwick. I study how to measure influence in networks. I am the editor of photo industry tech blog [Lighting Rumours](http://www.lightingrumours.com).
 
-You can find the source code for the Jekyll new theme at:
-(GITHUB LOGO) /
-[minima](https://github.com/jekyll/minima)
+Milk, no sugar.
 
-You can find the source code for Jekyll at
-(GITHUB LOGO) /
-[jekyll](https://github.com/jekyll/jekyll)
+![David Selby]({{ site.baseurl }}/img/david_selby.jpg)
