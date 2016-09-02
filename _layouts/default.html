@@ -7,8 +7,6 @@
         <img src="{{ site.baseurl }}/img/mug.svg" width="120px" alt="Tea and Stats">
         <h1><a href="{{ site.baseurl }}/">{{ site.title | escape }}</a></h1>
         <aside>{% if site.description %}{{ site.description | truncate: 100 }}{% endif %}</aside>
-        <!--<img src="http://placehold.it/160x160" alt="Tea and Stats logo">-->
-
       </header>
       <nav>{% for page in site.pages %}{% if page.title and page.hide != true %}
 		<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}{% endfor %}
@@ -19,11 +17,9 @@
         {{ content }}
       </main>
       <footer id="footer">
-        <!--<a href="{{ site.url }}">-->
           <a href='#'>
 			<img src="{{ site.baseurl }}/img/mug.svg" width="60px" alt="Back to top" title="Back to top">
 		  </a>
-        <!--</a>-->
         © 2016 David A. Selby | Brewed in Jekyll | <a href='#'>Github source</a>
       </footer>
     </div>
