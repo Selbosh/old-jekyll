@@ -11,7 +11,6 @@
       <nav>{% for page in site.pages %}{% if page.title and page.hide != true %}
 		<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}{% endfor %}
 		<a href="{{ site.baseurl }}/">Blog</a>
-        <a href='#'>Search</a>
       </nav>
       <main role="main">
         {{ content }}
