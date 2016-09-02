@@ -10,14 +10,8 @@
         <!--<img src="http://placehold.it/160x160" alt="Tea and Stats logo">-->
 
       </header>
-      <nav>
-		{% for page in site.pages %}
-			{% if page.title and page.hide != true %}
-				<a href="{{ page.url | prepend: site.baseurl }}">
-					{{ page.title }}
-				</a>
-			{% endif %}
-		{% endfor %}
+      <nav>{% for page in site.pages %}{% if page.title and page.hide != true %}
+		<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}{% endfor %}
 		<a href="{{ site.baseurl }}/">Blog</a>
         <a href='#'>Search</a>
       </nav>
