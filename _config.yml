@@ -20,3 +20,6 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl:  # must correspond to repository name for project sites
 baseurlknitr: / # where servr::jekyll (i.e. knitr) looks for images
 url: http://selbydavid.com/ # so links find their way back to homepage
+
+gems:
+  - jekyll-feed
