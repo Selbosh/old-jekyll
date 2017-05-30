@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+  <article>
+    <header>
+      <h2>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+      </h2>
+    </header>
+    <footer>
+      <time datetime="{{ post.date }}">{{ post.date | date: "%-d %B %Y" }}</time>
+    </footer>
+    {{ post.excerpt }}
+  </article>
+{% endfor %}
+<!--<p>subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>-->

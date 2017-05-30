@@ -1,0 +1,17 @@
+language: r
+pandoc_version: 1.17.2
+cache: packages
+
+branches:
+  only: source
+
+script:
+  - Rscript knit.R
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_PAT
+  on:
+    branch: source
+  target_branch: master
