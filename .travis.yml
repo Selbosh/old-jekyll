@@ -3,11 +3,7 @@ pandoc_version: 1.17.2
 cache: packages
 
 script:
-  - Rscript -e "servr:::knit_maybe(input = c('.', '_source', '_posts'),
-                   output = c('.', '_posts'),
-                   script = c('Makefile', 'build.R'),
-                   method = 'jekyll')"
-
+  - Rscript build.R
 
 deploy:
   provider: pages
