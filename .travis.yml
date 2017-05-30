@@ -2,6 +2,9 @@ language: r
 pandoc_version: 1.17.2
 cache: packages
 
+branches:
+  only: source
+
 script:
   - Rscript knit.R
 
