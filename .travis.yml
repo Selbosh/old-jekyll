@@ -1,0 +1,17 @@
+language: r
+pandoc_version: 1.17.2
+cache: packages
+
+script:
+  - Rscript -e "servr:::knit_maybe(input = c('.', '_source', '_posts'),
+                   output = c('.', '_posts'),
+                   script = c('Makefile', 'build.R'),
+                   method = 'jekyll')"
+
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_PAT
+  on:
+    branch: master
