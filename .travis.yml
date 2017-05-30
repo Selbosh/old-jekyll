@@ -3,7 +3,7 @@ pandoc_version: 1.17.2
 cache: packages
 
 script:
-  - Rscript -e "servr::jekyll(serve = FALSE, command = 'false')"
+  - Rscript build.R
 
 deploy:
   provider: pages
